@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Left Sidebar (Notion Style) -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-profile">
+                    <div class="avatar">L</div>
+                    <span class="user-name">Lumina Workspace</span>
+                </div>
+                <button class="icon-toggle" id="theme-toggle" title="Toggle Theme">
+                    <i data-lucide="moon" style="width: 16px; height: 16px;"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-search">
+                <i data-lucide="search" style="width: 16px; height: 16px; color: var(--text-muted);"></i>
+                <span>Search</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <span class="section-title">Core Tools</span>
+                    <button class="nav-item active" data-id="dashboard">
+                        <i data-lucide="home" style="color: #6366f1;"></i> <span>Dashboard</span>
+                    </button>
+                    <button class="nav-item" data-id="calendar">
+                        <i data-lucide="calendar" style="color: #f43f5e;"></i> <span>Calendar</span>
+                    </button>
+                    <button class="nav-item" data-id="planner">
+                        <i data-lucide="book-open" style="color: #10b981;"></i> <span>Day Logs</span>
+                    </button>
+                    <button class="nav-item" data-id="notes">
+                        <i data-lucide="file-text" style="color: #eab308;"></i> <span>Notes Workspace</span>
+                    </button>
+                    <button class="nav-item" data-id="ai">
+                        <i data-lucide="bot" style="color: #a855f7;"></i> <span>Lumina AI ✨</span>
+                    </button>
+                </div>
+
+                <div class="nav-section">
+                    <span class="section-title">Trackers</span>
+                    <button class="nav-item" data-id="timers">
+                        <i data-lucide="clock" style="color: #3b82f6;"></i> <span>Timers</span>
+                    </button>
+                    <button class="nav-item" data-id="coding">
+                        <i data-lucide="code" style="color: #f97316;"></i> <span>Coding</span>
+                    </button>
+                    <button class="nav-item" data-id="health">
+                        <i data-lucide="heart" style="color: #ec4899;"></i> <span>Health Tracker</span>
+                    </button>
+                    <button class="nav-item" data-id="todos">
+                        <i data-lucide="check-square" style="color: #14b8a6;"></i> <span>To-Do List</span>
+                    </button>
+                </div>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <i data-lucide="clock-4" style="width: 14px; height: 14px; color: var(--text-muted)"></i>
+                <span id="current-time-display">--:--</span>
+            </div>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="page-container" id="page-container">
+                <!-- App Modules Render Here -->
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
